@@ -1,0 +1,25 @@
+﻿{
+  "countries": [
+    {
+      "code": "XK",
+      "name": "Republic of Kosovo",
+      "capital": "Pristina",
+      "population": 1733842,
+      "area": 10908.0,
+    },
+    {
+      "code": "RO",
+      "name": "Romania",
+      "capital": "Bucharest",
+      "population": 19861408,
+      "area": 238391.0,
+    },
+    {
+      "code": "RU",
+      "name": "Russian Federation",
+      "capital": "Moscow",
+      "population": 146599183,
+      "area": 1.7124442,
+    }
+  ]
+}
