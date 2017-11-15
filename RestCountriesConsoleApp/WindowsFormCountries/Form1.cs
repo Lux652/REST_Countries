@@ -140,6 +140,32 @@ namespace WindowsFormCountries
             }
 
 
-        }  
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            string sSearch = (string)textBoxSearch.Text;
+            dataGridViewCountries.DataSource = lCountries.Where(o => o.sName.Contains(sSearch)).ToList();
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            string sKod = (string)textBoxCode.Text;
+            string sNaziv = (string)textBoxNaziv.Text;
+            string sGlavniGrad = (string)textBoxGrad.Text;
+            int nBrojStanovnika = Convert.ToInt32(textBoxStan.Text);
+            float fPovrsina = Convert.ToSingle(textBoxPovrsina.Text);
+            string sKontinent = (string)textBoxKont.Text;
+            lCountries.Add(new Country
+            {
+                sCode = sKod,
+                sName = sNaziv,
+                sCapital = sGlavniGrad,
+                nPopulation = nBrojStanovnika,
+                fArea = fPovrsina,
+                sRegion = sKontinent
+            });
+            dataGridViewCountries.DataSource = lCountries;
+        }
     }
 }
